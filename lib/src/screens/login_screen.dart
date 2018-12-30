@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../blocs/bloc.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -18,36 +19,52 @@ class LoginScreen extends StatelessWidget {
   }
 
   Widget emailTextField() {
-    return TextField(
-      keyboardType: TextInputType.emailAddress,
-      decoration: InputDecoration(
-          icon: Icon(Icons.person),
-          labelText: 'Email',
-          labelStyle: TextStyle(
-            color: Colors.red,
-            fontSize: 20.0,
+    return StreamBuilder(
+      stream: bloc.email,
+      builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+        return TextField(
+          onChanged: bloc.changeEmail,
+          keyboardType: TextInputType.emailAddress,
+          decoration: InputDecoration(
+            icon: Icon(Icons.person),
+            labelText: 'Email',
+            labelStyle: TextStyle(
+              color: Colors.red,
+              fontSize: 20.0,
+            ),
+            hintText: 'Enter email address',
+            errorText: snapshot.error,
           ),
-          hintText: 'Enter email address'),
+        );
+      },
     );
   }
 
   Widget passwordTextField() {
-    return TextField(
-      obscureText: true,
-      decoration: InputDecoration(
-          icon: Icon(Icons.security),
-          labelText: 'Password',
-          labelStyle: TextStyle(
-            color: Colors.red,
-            fontSize: 20.0,
+    return StreamBuilder(
+      stream: bloc.password,
+      builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+        return TextField(
+          onChanged: bloc.changePassword,
+          obscureText: true,
+          decoration: InputDecoration(
+            icon: Icon(Icons.security),
+            labelText: 'Password',
+            labelStyle: TextStyle(
+              color: Colors.red,
+              fontSize: 20.0,
+            ),
+            hintText: 'Enter password',
+            errorText: snapshot.error,
           ),
-          hintText: 'Enter password'),
+        );
+      },
     );
   }
 
   Widget loginButton() {
     return RaisedButton(
-      onPressed: (){},
+      onPressed: () {},
       textColor: Colors.white,
       color: Colors.red,
       child: Text('Login'),
