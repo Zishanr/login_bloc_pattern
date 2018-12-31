@@ -3,7 +3,7 @@
 A Login application using flutter recommended bloc pattern.
 
 This project is just a start with flutter. In this project i got knowledge about following 
-* Bloc Pattern Overview (Architecture -> StreamController, Sink, StramTreansformer).
+* Bloc Pattern Overview (Architecture -> StreamController, Sink, StreamTransformer).
 * Global Instance and Scope Level Bloc Patten.
 * Mixins.
 * Stream Builder Widget
