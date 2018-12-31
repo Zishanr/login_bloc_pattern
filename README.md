@@ -1,6 +1,27 @@
-# login_bloc_pattern
+# Login Screen UI Scope Bloc Pattern (Using Provider -> InheritedWidget)
 
-A new Flutter application.
+A Login application using flutter recommended bloc pattern.
+
+This project is just a start with flutter. In this project i got knowledge about following 
+* Bloc Pattern Overview (Architecture -> StreamController, Sink, StramTreansformer).
+* Global Instance and Scope Level Bloc Patten.
+* Mixins.
+* Stream Builder Widget
+* Provider Overview (inheritFromWidgetOfExactType).
+* Using Bloc pattern in two ways:-
+    * Global Instance Bloc Pattern.
+    * Scope Level Bloc Pattern.
+
+For help getting started with Flutter, view the online
+[documentation](https://flutter.io/).
+
+## Dependencies
+
+* [Flutter](https://flutter.io/)
+* [Streams](https://api.dartlang.org/stable/2.1.0/dart-async/Stream-class.html)
+* [Dart Async](https://github.com/dart-lang/async)
+* [DartPad](https://dartpad.dartlang.org/)
+
 
 ## Getting Started
 
