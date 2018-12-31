@@ -29,4 +29,4 @@ class Bloc extends Object with Validators {
 }
 
 // Bloc Pattern using Single Global instance
-final Bloc bloc = new Bloc();
+//final Bloc bloc = new Bloc();
